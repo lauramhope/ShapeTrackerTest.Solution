@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShapeTracker.Models;
-using System.Collections.Generic; 
-using System; 
+using System.Collections.Generic;
+using System;
 
 namespace ShapeTracker.Tests
 {
@@ -12,10 +12,11 @@ namespace ShapeTracker.Tests
     {
       Triangle.ClearAll();
     }
+
     [TestMethod]
     public void TriangleConstructor_CreatesInstanceOfTriangle_Triangle()
     {
-      Triangle newTriangle = new Triangle(2, 3, 8); // Updated!!
+      Triangle newTriangle = new Triangle(2, 3, 8);
       Assert.AreEqual(typeof(Triangle), newTriangle.GetType());
     }
 
@@ -24,7 +25,7 @@ namespace ShapeTracker.Tests
     {
       // Arrange
       int length1 = 3;
-      Triangle newTriangle = new Triangle(length1, 2, 8); // Updated!!
+      Triangle newTriangle = new Triangle(length1, 2, 8);
       // Act
       int result = newTriangle.Side1;
       // Assert
@@ -35,7 +36,7 @@ namespace ShapeTracker.Tests
     public void SetSide1_SetsValueOfSide1_Void()
     {
       // Arrange
-      Triangle newTriangle = new Triangle(3, 3, 8); // Updated!!
+      Triangle newTriangle = new Triangle(3, 3, 8);
       int newLength1 = 44;
       // Act
       newTriangle.Side1 = newLength1;
@@ -48,7 +49,7 @@ namespace ShapeTracker.Tests
     {
       // Arrange
       int length2 = 3;
-      Triangle newTriangle = new Triangle(2, length2, 8); // Updated!!
+      Triangle newTriangle = new Triangle(2, length2, 8);
       // Act
       int result = newTriangle.Side2;
       // Assert
@@ -59,7 +60,7 @@ namespace ShapeTracker.Tests
     public void SetSide2_SetsValueOfSide2_Void()
     {
       // Arrange
-      Triangle newTriangle = new Triangle(3,4, 8); // Updated!!
+      Triangle newTriangle = new Triangle(3,4, 8);
       int newLength2 = 6;
       // Act
       newTriangle.Side2 = newLength2;
@@ -78,6 +79,7 @@ namespace ShapeTracker.Tests
       // Assert
       Assert.AreEqual(length3, result);
     }
+
     [TestMethod]
     public void SetSide3_SetsValueOfSide3_Void()
     {
@@ -100,7 +102,7 @@ namespace ShapeTracker.Tests
       // Assert
       Assert.AreEqual("not a triangle", triType);
     }
-      
+
     [TestMethod]
     public void CheckType_DeterminesWhenScalene_String()
     {
