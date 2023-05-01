@@ -19,18 +19,18 @@ namespace ShapeTracker.Tests
       Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
     }
 
-    // [TestMethod]
-    // public void GetLength_ReturnsLength_Int()
-    // {
-    //   // Arrange
-    //   int length = 3;
-    //   int width = 4;
-    //   Rectangle newRectangle = new Rectangle(length, width);
-    //   // Act
-    //   int result = newRectangle.Length;
-    //   // Assert
-    //   Assert.AreEqual(length, result);
-    // }
+    [TestMethod]
+    public void GetLength_ReturnsLength_Int()
+    {
+      // Arrange
+      int length = 3;
+      int width = 4;
+      Rectangle newRectangle = new Rectangle(length, width);
+      // Act
+      int result = newRectangle.Length;
+      // Assert
+      Assert.AreEqual(length, result);
+    }
 
     // [TestMethod]
     // public void SetLength_SetsValueOfLength_Void()
